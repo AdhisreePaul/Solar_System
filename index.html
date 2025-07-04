@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Solar System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+        
+        <div id="controls">
+            <div class="control-header">🌟 Solar System Controls</div>
+            <div class="main-controls">
+                <button id="pauseBtn" class="btn">⏸️ Pause</button>
+                <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+            </div>
+            <div id="planet-controls"></div>
+        </div>
+        
+        <div id="info">
+            <strong>Controls:</strong><br>
+            • Mouse: Rotate view<br>
+            • Scroll: Zoom in/out<br>
+            • Hover: Planet info<br>
+            • Sliders: Adjust orbit speed
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
