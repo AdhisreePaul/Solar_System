@@ -32,7 +32,7 @@ export class MainScene {
 
     // Create sun
     const textureLoader = new THREE.TextureLoader();
-    const sunTexture = textureLoader.load("../assests/textures/sun.jpg");
+    const sunTexture = textureLoader.load("../images/sun.jpg");
     const sunGeometry = new THREE.SphereGeometry(5, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({ map: sunTexture });
     this.sun = new THREE.Mesh(sunGeometry, sunMaterial);
@@ -50,13 +50,13 @@ export class MainScene {
     // Create background and planets
     const loader = new THREE.TextureLoader();
     const milkyWayTexture = loader.load(
-      "../assests/textures/stars_milky_way.jpg"
+      "../images/stars_milky_way.jpg"
     );
     this.scene.background = milkyWayTexture;
 
     const geometry = new THREE.SphereGeometry(500, 64, 64);
     const material = new THREE.MeshBasicMaterial({
-      map: loader.load("../assests/textures/stars_milky_way.jpg"),
+      map: loader.load("../images/stars_milky_way.jpg"),
       side: THREE.BackSide, // Render inside of sphere
     });
     const starSphere = new THREE.Mesh(geometry, material);

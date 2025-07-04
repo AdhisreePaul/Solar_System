@@ -61,14 +61,6 @@ export function setupUI(sceneInstance) {
         pauseBtn.classList.toggle('active', sceneInstance.isPaused);
     });
 
-    const themeBtn = document.getElementById('themeBtn');
-    themeBtn.addEventListener('click', () => {
-        isDarkMode = !isDarkMode;
-        sceneInstance.renderer.setClearColor(isDarkMode ? 0x000000 : 0x87CEEB);
-        themeBtn.textContent = isDarkMode ? '🌙 Dark Mode' : '☀️ Light Mode';
-        themeBtn.classList.toggle('active', !isDarkMode);
-    });
-
     // Mouse move for tooltips
     sceneInstance.renderer.domElement.addEventListener('mousemove', (event) => {
         mouse.x = (event.clientX / window.innerWidth) * 2 - 1;

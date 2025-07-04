@@ -53,8 +53,8 @@ export function createPlanets() {
     const planetGeometry = new THREE.SphereGeometry(data.size, 32, 32);
     // Use MeshStandardMaterial for more realistic lighting and textures
     const planetMaterial = new THREE.MeshStandardMaterial({
-      map: textureLoader.load(`../assests/textures/${data.texture}`),
-    });
+      map: textureLoader.load(`../images/${data.texture}`),
+    })
     const planetMesh = new THREE.Mesh(planetGeometry, planetMaterial);
     planetMesh.position.x = data.distance;
     planetMesh.castShadow = true;
@@ -66,7 +66,7 @@ export function createPlanets() {
       const outerRadius = data.size * 2;
       const ringGeometry = new THREE.RingGeometry(innerRadius, outerRadius, 64);
       const ringTexture = textureLoader.load(
-        "../assests/textures/saturn_ring.png"
+        "../images/saturn_ring.png"
       );
       const ringMaterial = new THREE.MeshBasicMaterial({
         map: ringTexture,
